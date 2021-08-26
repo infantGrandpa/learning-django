@@ -11,7 +11,7 @@ def register(request):
             form.save()
             username = form.cleaned_data.get('username')
             messages.success(
-                request, f'Your account {username} has been created!'
+                request, f'Your account {username} has been created! '
                 'You are now able to log in.')
             return redirect('blog-home')
     else:
